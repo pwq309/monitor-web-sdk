@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<title>@music/corona-web-sdk</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<style>
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:normal;}
+del,ins,u,s,a{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:16px/1.5 Helvetica,sans-serif,STHeiTi;color:#333;outline:0;}
+.wrap{padding: 10px;}
+</style>
+</head>
+<body>
+    <div id="J_wrap" class="wrap">点击触发 js 错误</div>
+    <div id="J_wrap2" class="wrap2">点击触发 unhandleRejection 事件</div>
+    <div id="J_wrap3" class="wrap3">主动上报 error 日志</div>
+    <div id="J_wrap4" class="wrap4">主动上报 info 日志</div>
+    <script type="text/javascript">
+    (function (_window, _onerror, _onunhandledrejection) {
+        // Create a namespace and attach function that will store captured exception
+        // Because functions are also objects, we can attach the queue itself straight to it and save some bytes
+        _window.corona_error_cache = function (exception) {
+            _window.corona_error_cache.data.push(exception);
+        };
+        _window.corona_error_cache.data = [];
+
+        // Store reference to the old `onerror` handler and override it with our own function
+        // that will just push exceptions to the queue and call through old handler if we found one
+        var _oldOnerror = _window[_onerror];
+        _window[_onerror] = function (message, source, lineno, colno, exception) {
+            console.log('catch error!');
+            // Use keys as "data type" to save some characters"
+            _window.corona_error_cache({
+                e: exception,
+                event: 'error'
+            });
+
+            if (_oldOnerror) _oldOnerror.apply(_window, arguments);
+        };
+
+        // Do the same store/queue/call operations for `onunhandledrejection` event
+        var _oldOnunhandledrejection = _window[_onunhandledrejection];
+        _window[_onunhandledrejection] = function (exception) {
+            console.log('catch unhandledrejection!');
+            _window.corona_error_cache({
+                e: exception.reason,
+                event: 'unhandledrejection'
+            });
+            if (_oldOnunhandledrejection) _oldOnunhandledrejection.apply(_window, arguments);
+        };
+    })(window, 'onerror', 'onunhandledrejection');
+    </script>
+    <!--
+    <script type="text/javascript">
+        window.coronaInit = function() {
+            var SDK = window.MusicCorona;
+            window.corona = SDK({
+                id: 39,
+                env: 'dev',
+                debug: true,
+            });
+            console.log('corona init finished!');
+        }
+    </script>
+    -->
+    <script type="text/javascript">
+        console.log('监听事件');
+        document.addEventListener('CoronaInited',() => {
+            console.log('Corona 初始化成功');
+            console.log(window.corona);
+        });
+    </script>
+    <script type="text/javascript" src="test.js"></script>
+    <!--
+    <script type="text/javascript">
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "http://s6.music.126.net/static_public/5e7dd9894cb30d2fd378f94f/2.2.0/music-corona.min.js";
+        script.async = true;
+        script.onload = coronaInit;
+        document.body.appendChild(script);
+    </script>
+    -->
+</body>
+</html>

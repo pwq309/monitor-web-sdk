@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>112/140</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.65% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>65/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.56% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>112/140</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// +----------------------------------------------------------------------
+// | corona
+// +----------------------------------------------------------------------
+// | HomePage : https://g.hz.verify.com/cloudverify-frontend/common-tech-frontend/corona-web-sdk
+// +----------------------------------------------------------------------
+// | Author: panwanqiang &lt;panwanqiang@corp.verify.com&gt;
+// +----------------------------------------------------------------------
+/*
+ eslint-disable no-param-reassign
+*/
+&nbsp;
+import CoronaConstructor from './core.js';
+import coronaOptions from './config';
+import utils from './utils';
+import polymorphic from './polymorphic';
+&nbsp;
+const objectMerge = utils.objectMerge;
+const Coronacore = new CoronaConstructor();
+&nbsp;
+/**
+ * 处理xhr对象，提取关键属性并返回
+ * @param {Object} xhrObj
+ */
+const extractXhrAttr = (xhrObj) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!utils.isXMLHttpRequest(xhrObj)) {
+<span class="cstat-no" title="statement not covered" >        return xhrObj;</span>
+    }
+    const result = {};
+    objectMerge(result, xhrObj);
+    result.readyState = xhrObj.readyState;
+    result.responseText = xhrObj.responseText;
+    result.responseType = xhrObj.responseType;
+    result.responseURL = xhrObj.responseURL;
+    result.status = xhrObj.status;
+    result.statusText = xhrObj.statusText;
+    result.timeout = xhrObj.timeout;
+    return result;
+};
+&nbsp;
+/**
+ * 处理event对象，提取关键属性并返回
+ * @param {Object} eventObj
+ */
+const extractEventAttr = <span class="fstat-no" title="function not covered" >(e</span>ventObj) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!utils.isEvent(eventObj)) {</span>
+<span class="cstat-no" title="statement not covered" >        return eventObj;</span>
+    }
+    const result = <span class="cstat-no" title="statement not covered" >{};</span>
+    // eslint-disable-next-line guard-for-in
+<span class="cstat-no" title="statement not covered" >    for (const i in eventObj) {</span>
+<span class="cstat-no" title="statement not covered" >        result[i] = eventObj[i];</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+};
+&nbsp;
+/**
+ * 处理特殊对象，提取关键属性并返回
+ * @param {Object} obj
+ */
+const extractAttr = (obj) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (utils.isXMLHttpRequest(obj)) {
+<span class="cstat-no" title="statement not covered" >        return extractXhrAttr(obj);</span>
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (utils.isEvent(obj)) {
+<span class="cstat-no" title="statement not covered" >        return extractEventAttr(obj);</span>
+    }
+    return obj;
+};
+&nbsp;
+/**
+ * 设置用户
+ * @param {string} user
+ */
+const setUser = <span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!utils.isString(user)) {</span>
+        // eslint-disable-next-line no-console
+<span class="cstat-no" title="statement not covered" >        console.warn('Corona setUser failed, the argument must be a string');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        Coronacore.setUserContext(user);</span>
+    }
+};
+&nbsp;
+/**
+ * 设置全局tag
+ * @param {object} tag
+ */
+const setGlobalTags = <span class="fstat-no" title="function not covered" >(t</span>ag) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!utils.isPlainObject(tag)) {</span>
+        // eslint-disable-next-line no-console
+<span class="cstat-no" title="statement not covered" >        console.warn('Corona setGlobalTags failed, the argument must be a plain object');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        Coronacore.setTagsContext(tag);</span>
+    }
+};
+&nbsp;
+/**
+ * 设置日志发送失败的错误处理回调
+ * @param {function | null} cb
+ */
+const setGlobalOnError = <span class="fstat-no" title="function not covered" >(c</span>b) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!utils.isFunction(cb) &amp;&amp; !utils.isNull(cb)) {</span>
+        // eslint-disable-next-line no-console
+<span class="cstat-no" title="statement not covered" >        console.warn('Corona setGlobalOnError failed, the argument must be a function or null');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        Coronacore.setSentErrorCallback(cb);</span>
+    }
+};
+&nbsp;
+/**
+ * 设置事件上报接口，适配业务的域名，携带 cookie 解析登录态
+ * @param {string} url
+ */
+const setEventUrl = <span class="fstat-no" title="function not covered" >(u</span>rl) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!utils.isUrl(url)) {</span>
+        // eslint-disable-next-line no-console
+<span class="cstat-no" title="statement not covered" >        console.warn('Corona setEventUrl failed, the argument must be an url');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        Coronacore.setEventUrl(url);</span>
+    }
+};
+&nbsp;
+/**
+ * 发送信息
+ * @param {string | Object} msg
+ */
+const info = (msg, tags) =&gt; {
+    let message;
+    const payloads = {
+        level: 'info',
+        tags: '',
+        active: true,
+    };
+&nbsp;
+    if (typeof msg === 'string') {
+        message = msg;
+    } else if (msg instanceof Error) {
+        message = msg.message;
+    } else {
+        message = 'Corona入参Error：信息只可以传字符串';
+        msg = extractAttr(msg);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (utils.isPlainObject(msg)) {
+            tags = utils.isPlainObject(tags) ? <span class="branch-0 cbranch-no" title="branch not covered" >objectMerge(tags, msg) </span>: msg;
+        }
+    }
+    payloads.tags = tags || '';
+&nbsp;
+    Coronacore.captureMessage(message, payloads);
+};
+&nbsp;
+/**
+ * 发送警告
+ * @param {string | Object} msg
+ */
+const warn = (msg, tags) =&gt; {
+    let message;
+    const payloads = {
+        level: 'warn',
+        tags: '',
+        active: true,
+    };
+&nbsp;
+    if (typeof msg === 'string') {
+        message = msg;
+    } else if (msg instanceof Error) {
+        message = msg.message;
+    } else {
+        message = 'Corona入参Error：警告只可以传字符串';
+        msg = extractAttr(msg);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (utils.isPlainObject(msg)) {
+            tags = utils.isPlainObject(tags) ? <span class="branch-0 cbranch-no" title="branch not covered" >objectMerge(tags, msg) </span>: msg;
+        }
+    }
+    payloads.tags = tags || '';
+&nbsp;
+    Coronacore.captureMessage(message, payloads);
+};
+&nbsp;
+/**
+ * 发送错误
+ * @param {string | object} msg
+ * @param {undefined | boolean} active 如果是 undefined 则根据 msg 类型定义上报行为，是错误对象则为 false
+ */
+const error = (msg, tags, active, type) =&gt; {
+    let message;
+    let preProcessActive;
+    const msgIsError = msg instanceof Error;
+&nbsp;
+    if (utils.isBoolean(active)) {
+        preProcessActive = active;
+    } else if (msgIsError) {
+        preProcessActive = false;
+    } else {
+        preProcessActive = true;
+    }
+    const payloads = {
+        level: 'error',
+        tags: '',
+        active: preProcessActive,
+    };
+    const errPayloads = {};
+&nbsp;
+    if (typeof msg === 'string') {
+        message = msg;
+    } else if (msgIsError) {
+        // 提取传入的 Error 对象的自定义属性，作为 tags 上报
+        for (const i in msg) {
+            // eslint-disable-next-line no-prototype-builtins
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (msg.hasOwnProperty(i)) {
+                errPayloads[i] = msg[i];
+            }
+        }
+        message = msg;
+    } else {
+        message = 'Corona入参Error：错误只可以传字符串或者错误对象';
+        msg = extractAttr(msg);
+        if (utils.isPlainObject(msg)) {
+            tags = utils.isPlainObject(tags) ? <span class="branch-0 cbranch-no" title="branch not covered" >objectMerge(tags, msg) </span>: msg;
+        }
+    }
+&nbsp;
+    // 错误对象上有自定义数据
+    if (JSON.stringify(errPayloads) !== '{}') {
+        if (utils.isPlainObject(tags)) {
+            tags = Object.assign({}, errPayloads, tags);
+        } else {
+            tags = errPayloads;
+        }
+    }
+    payloads.tags = tags || '';
+&nbsp;
+    Coronacore.captureException(message, payloads, type);
+};
+&nbsp;
+/**
+ * 全局捕获 unhandledrejection 事件的处理函数
+ * @param {object} reason
+ */
+const onunhandledrejectionCallback = (reason) =&gt; {
+    // 如果 reject 出来的是个普通对象，为了友好上报放到 tag 信息里
+    if (utils.isPlainObject(reason)) {
+        const errorMessage = polymorphic.formatPlainObjectMessage(reason);
+        error(errorMessage, reason, false, 'unhandledrejection');
+    // 如果 reject 出来的是个数组，为了友好上报放到 tag 信息里
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (utils.isArray(reason)) {
+<span class="cstat-no" title="statement not covered" >        error('未处理的 unhandledrejection 事件', {</span>
+            type: 'array',
+            data: JSON.stringify(reason)
+        }, false, 'unhandledrejection');
+    // 如果 reject 出来的是个函数，为了友好上报放到 tag 信息里
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (utils.isFunction(reason)) {
+<span class="cstat-no" title="statement not covered" >        error('未处理的 unhandledrejection 事件', {</span>
+            type: 'function',
+            data: reason.toString()
+        }, false, 'unhandledrejection');
+    // 如果 reject 出来的是个boolean，为了友好上报放到 tag 信息里
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (utils.isBoolean(reason)) {
+<span class="cstat-no" title="statement not covered" >        error('未处理的 unhandledrejection 事件', {</span>
+            type: 'boolean',
+            data: reason
+        }, false, 'unhandledrejection');
+    // 如果 reject 出来的是个 XMLHttpRequest 对象，提取接口信息聚合
+    } else if (utils.isXMLHttpRequest(reason)) {
+        const errMsg = (reason.responseURL &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >`${reason.responseURL.split('?')[0]} 请求失败`)</span>
+            || '接口请求失败';
+        const tags = extractXhrAttr(reason);
+        error(errMsg, tags, false, 'unhandledrejection');
+    } else {
+        error(reason, {
+            type: Object.prototype.toString.call(reason)
+        }, false, 'unhandledrejection');
+    }
+};
+&nbsp;
+/**
+ * 全局捕获 error 事件的处理函数
+ * @param {object} 错误对象
+ */
+const onerrorCallback = (e) =&gt; {
+    // __corona_wrapper__ 是已被 try-catch 劫持的标识，不再重复上报
+    if (e &amp;&amp; e.type === '__corona_wrapper__') {
+        return;
+    }
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (e) {
+        error(e, '', false);
+    }
+};
+&nbsp;
+/**
+ * 上报缓存错误（为cloudverify异步下发 SDK 做的 hack 处理）
+ * @param {object} 错误对象
+ */
+const uploadCacheError = () =&gt; {
+    // eslint-disable-next-line no-underscore-dangle
+    if (!window.corona_error_cache
+        || !window.corona_error_cache.data
+        || !window.corona_error_cache.data.length) {
+        return;
+    }
+&nbsp;
+    window.corona_error_cache.data.forEach((element) =&gt; {
+        if (element.event === 'error') {
+            onerrorCallback(element.e);
+        }
+        if (element.event === 'unhandledrejection') {
+            onunhandledrejectionCallback(element.e);
+        }
+    });
+    // 释放
+    delete window.corona_error_cache;
+    // xxx
+};
+&nbsp;
+/**
+ * 启动监控
+ * @param {object}
+ * @param {number} id 应用在 corona 中的接入 id
+ * @param {string} env 当前环境变量，默认 'prod'
+ * @param {boolean} debug 是否开启 debug 模式，开启后会上报 dev 环境的错误日志，默认 false
+ */
+const corona = (params) =&gt; {
+    if (!params.id) {
+        // eslint-disable-next-line no-console
+        console.warn('Corona 初始化失败：请传入应用 id');
+        return null;
+    }
+    const env = params.env || <span class="branch-1 cbranch-no" title="branch not covered" >'prod';</span>
+    const debug = params.debug || false;
+    Coronacore.config(params.id, env, debug, coronaOptions)
+        .install();
+&nbsp;
+    // 启动时增加全局捕获 Promise 的未处理异常 unhandledrejection 事件
+    window.onunhandledrejection = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >        onunhandledrejectionCallback(e.reason);</span>
+    };
+    // 启动时增加全局捕获错误事件，用于处理通过 Corona 劫持回调函数无法覆盖的场景
+    window.onerror = <span class="fstat-no" title="function not covered" >(m</span>sg, url, lineNo, columnNo, e) =&gt; {
+<span class="cstat-no" title="statement not covered" >        onerrorCallback(e);</span>
+    };
+    uploadCacheError();
+&nbsp;
+    setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+        // 抛出 Corona 初始化成功的全局事件
+        const coronaInited = <span class="cstat-no" title="statement not covered" >new Event('CoronaInited');</span>
+<span class="cstat-no" title="statement not covered" >        window.document.dispatchEvent(coronaInited);</span>
+    }, 0);
+&nbsp;
+    return {
+        info,
+        warn,
+        error,
+        setUser,
+        setGlobalTags,
+        setGlobalOnError,
+        setEventUrl,
+    };
+};
+&nbsp;
+// 将corona函数挂载在全局对象上
+window.MusicCorona = corona;
+&nbsp;
+export default corona;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 30 2024 16:09:49 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
